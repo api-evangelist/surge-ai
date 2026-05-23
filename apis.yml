@@ -1,0 +1,238 @@
+aid: surge-ai
+name: Surge AI
+description: Surge AI is a human-data company that provides large-scale, expert-quality labeled data for training and evaluating
+  frontier AI models. The product surface spans RL environments and agents (rich, complex environments that challenge agentic
+  models), rubrics and verifiers (scoring systems for AI outputs), RLHF (preference and reward data), SFT (foundational
+  skill demonstrations), human evaluation, expert professional domains, internationalization across 70+ languages, multimodal
+  (image, audio, video) data, and off-the-shelf datasets. Surge ships an official Python SDK (surge-python) wrapping the
+  Surge API, with API-key authentication, and exposes the dashboard and API reference at app.surgehq.ai. Public datasets
+  published by Surge include the toxicity dataset (the world's largest social-media toxicity dataset).
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Human Data
+- RLHF
+- SFT
+- Rubrics
+- Verifiers
+- RL Environments
+- Multimodal
+- Internationalization
+- Labeling
+url: https://raw.githubusercontent.com/api-evangelist/surge-ai/refs/heads/main/apis.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis:
+- aid: surge-ai:surge-api
+  name: Surge API
+  description: Surge's REST API for managing labeling projects, tasks, and results. Endpoints cover projects (list, retrieve,
+    create, download results, save reports in multiple formats), tasks (create, list, retrieve individual tasks), and blueprints
+    (list and use as templates for new projects). Authentication uses an API key sourced from the user's Surge profile, passed
+    via the SURGE_API_KEY environment variable or set explicitly on the client. The reference is published in the Surge dashboard
+    at app.surgehq.ai/docs/api.
+  humanURL: https://app.surgehq.ai/docs/api
+  tags:
+  - REST API
+  - Projects
+  - Tasks
+  - Blueprints
+  properties:
+  - type: Documentation
+    url: https://app.surgehq.ai/docs/api
+  - type: APIReference
+    url: https://app.surgehq.ai/docs/api
+  - type: Authentication
+    url: https://app.surgehq.ai/docs/api
+  - type: SDK
+    url: https://github.com/surge-ai/surge-python
+- aid: surge-ai:surge-python-sdk
+  name: Surge Python SDK
+  description: Official Python SDK (surge-api on PyPI) wrapping the Surge API. Requires Python 3.10+, MIT-licensed, and last
+    updated May 2026. Configured via surge.api_key or the SURGE_API_KEY environment variable.
+  humanURL: https://github.com/surge-ai/surge-python
+  tags:
+  - SDK
+  - Python
+  - Open Source
+  properties:
+  - type: GitHubRepository
+    url: https://github.com/surge-ai/surge-python
+  - type: SDK
+    url: https://pypi.org/project/surge-api/
+- aid: surge-ai:surge-rl-environments
+  name: Surge RL Environments and Agents
+  description: Surge's product surface for delivering complex reinforcement-learning environments and agents that challenge
+    and evaluate agentic models.
+  humanURL: https://www.surgehq.ai/products
+  tags:
+  - RL Environments
+  - Agents
+  - Evals
+  properties:
+  - type: Documentation
+    url: https://www.surgehq.ai/products
+- aid: surge-ai:surge-rubrics-verifiers
+  name: Surge Rubrics and Verifiers
+  description: Scoring rubrics and automated verifiers for grading AI outputs across domains.
+  humanURL: https://www.surgehq.ai/products
+  tags:
+  - Rubrics
+  - Verifiers
+  - Evals
+  properties:
+  - type: Documentation
+    url: https://www.surgehq.ai/products
+- aid: surge-ai:surge-rlhf
+  name: Surge RLHF
+  description: Preference and reward data for reinforcement learning from human feedback.
+  humanURL: https://www.surgehq.ai/products
+  tags:
+  - RLHF
+  - Preference Data
+  properties:
+  - type: Documentation
+    url: https://www.surgehq.ai/products
+- aid: surge-ai:surge-sft
+  name: Surge SFT
+  description: Foundational-skill demonstration data for supervised fine-tuning.
+  humanURL: https://www.surgehq.ai/products
+  tags:
+  - SFT
+  - Fine-Tuning
+  properties:
+  - type: Documentation
+    url: https://www.surgehq.ai/products
+- aid: surge-ai:surge-human-evaluation
+  name: Surge Human Evaluation
+  description: Quality assessment of AI outputs by Surge's expert workforce.
+  humanURL: https://www.surgehq.ai/products
+  tags:
+  - Human Evaluation
+  - Quality
+  properties:
+  - type: Documentation
+    url: https://www.surgehq.ai/products
+- aid: surge-ai:surge-multimodal
+  name: Surge Multimodal Data
+  description: Image, audio, and video data collection and labeling.
+  humanURL: https://www.surgehq.ai/products
+  tags:
+  - Multimodal
+  - Image
+  - Audio
+  - Video
+  properties:
+  - type: Documentation
+    url: https://www.surgehq.ai/products
+- aid: surge-ai:surge-internationalization
+  name: Surge Internationalization
+  description: Multilingual data across 70+ languages for localization, translation, and multilingual model evaluation.
+  humanURL: https://www.surgehq.ai/products
+  tags:
+  - Internationalization
+  - Multilingual
+  - Translation
+  properties:
+  - type: Documentation
+    url: https://www.surgehq.ai/products
+- aid: surge-ai:surge-off-the-shelf-data
+  name: Surge Off-The-Shelf Data
+  description: Pre-built datasets ready for licensing and download.
+  humanURL: https://www.surgehq.ai/products
+  tags:
+  - Datasets
+  - Pre-Built Data
+  properties:
+  - type: Documentation
+    url: https://www.surgehq.ai/products
+- aid: surge-ai:surge-toxicity-dataset
+  name: Surge Toxicity Dataset
+  description: The world's largest open social-media toxicity dataset, published under MIT license.
+  humanURL: https://github.com/surge-ai/toxicity
+  tags:
+  - Dataset
+  - Open Data
+  - Toxicity
+  - Trust and Safety
+  properties:
+  - type: GitHubRepository
+    url: https://github.com/surge-ai/toxicity
+common:
+- type: Portal
+  url: https://www.surgehq.ai
+- type: Documentation
+  url: https://app.surgehq.ai/docs/api
+- type: APIReference
+  url: https://app.surgehq.ai/docs/api
+- type: Authentication
+  url: https://app.surgehq.ai/docs/api
+- type: SignUp
+  url: https://app.surgehq.ai/customers/sign_in
+- type: Console
+  url: https://app.surgehq.ai
+- type: SDK
+  url: https://github.com/surge-ai/surge-python
+  name: Surge Python SDK
+- type: SDK
+  url: https://pypi.org/project/surge-api/
+  name: surge-api on PyPI
+- type: GitHubOrganization
+  url: https://github.com/surge-ai
+- type: GitHubRepository
+  url: https://github.com/surge-ai/toxicity
+  name: Surge Toxicity Dataset
+- type: Blog
+  url: https://www.surgehq.ai/blog
+- type: Support
+  url: https://www.surgehq.ai
+- type: X
+  url: https://x.com/HelloSurgeAI
+- type: Features
+  data:
+  - name: Surge REST API
+    description: Endpoints for projects, tasks, and blueprints, with API-key authentication.
+  - name: Python SDK
+    description: Official surge-python SDK on PyPI, MIT-licensed, Python 3.10+.
+  - name: RL Environments and Agents
+    description: Complex environments that challenge agentic models.
+  - name: Rubrics and Verifiers
+    description: Scoring systems for AI outputs across domains.
+  - name: RLHF and SFT
+    description: Preference, reward, and demonstration data for foundation-model training.
+  - name: Human Evaluation
+    description: Expert workforce grades AI output quality.
+  - name: Expert Professional Domains
+    description: Specialized expertise across finance, law, medicine, and more.
+  - name: 70+ Languages
+    description: Internationalization coverage spanning more than 70 languages.
+  - name: Multimodal Data
+    description: Image, audio, and video collection and labeling.
+  - name: Off-The-Shelf Datasets
+    description: Pre-built datasets available for licensing.
+  - name: Open Datasets
+    description: Public releases including the world's largest social-media toxicity dataset.
+- type: UseCases
+  data:
+  - name: Frontier Model RLHF
+    description: Preference and reward data for reinforcement learning from human feedback.
+  - name: Supervised Fine-Tuning
+    description: Demonstration data for SFT across professional domains.
+  - name: Agentic Evals
+    description: Benchmark agents in complex RL environments with structured rubrics.
+  - name: Multilingual Model Evaluation
+    description: Evaluate model quality across 70+ languages.
+  - name: Trust and Safety Research
+    description: Use the toxicity dataset and human evaluation pipelines for trust and safety work.
+- type: Integrations
+  data:
+  - name: Python SDK
+    description: Programmatic integration via the official surge-python SDK.
+  - name: API Key Authentication
+    description: Standard API-key auth (SURGE_API_KEY env var or programmatic configuration).
+  - name: Custom Project Blueprints
+    description: Use Surge blueprints as templates for new labeling projects.
+maintainers:
+- FN: Kin Lane
+  url: http://apievangelist.com
+  email: kin@apievangelist.com
