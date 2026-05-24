@@ -1,0 +1,375 @@
+openapi: 3.1.0
+info:
+  title: Surge AI API
+  description: >-
+    Surge AI is a human-data platform for labeling, RLHF/SFT data collection,
+    rubrics, and evaluation. This OpenAPI documents the REST endpoints used by
+    the official surge-python SDK (https://github.com/surge-ai/surge-python),
+    covering projects, tasks, and teams. Authentication uses API key Basic auth
+    via the SURGE_API_KEY.
+  version: "1.0.0"
+  contact:
+    name: Surge AI documentation
+    url: https://app.surgehq.ai/docs/api
+servers:
+  - url: https://app.surgehq.ai/api
+    description: Production
+security:
+  - basicAuth: []
+tags:
+  - name: Projects
+  - name: Tasks
+  - name: Teams
+paths:
+  /projects:
+    get:
+      tags: [Projects]
+      summary: List projects
+      operationId: listProjects
+      responses:
+        '200':
+          description: List of projects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Project'
+    post:
+      tags: [Projects]
+      summary: Create project
+      operationId: createProject
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProjectCreate'
+      responses:
+        '200':
+          description: Project created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Project'
+  /projects/shared:
+    get:
+      tags: [Projects]
+      summary: List organization-wide (shared) projects
+      operationId: listSharedProjects
+      responses:
+        '200':
+          description: Shared projects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Project'
+  /projects/blueprints:
+    get:
+      tags: [Projects]
+      summary: List blueprint projects
+      operationId: listBlueprints
+      responses:
+        '200':
+          description: Blueprints
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Project'
+  /projects/{project_id}:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    get:
+      tags: [Projects]
+      summary: Retrieve a project
+      operationId: getProject
+      responses:
+        '200':
+          description: Project details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Project'
+    put:
+      tags: [Projects]
+      summary: Update a project
+      operationId: updateProject
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProjectUpdate'
+      responses:
+        '200':
+          description: Updated project
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Project'
+  /projects/{project_id}/copies:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    get:
+      tags: [Projects]
+      summary: List project copies
+      operationId: listProjectCopies
+      responses:
+        '200':
+          description: Copies
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Project'
+  /projects/{project_id}/launch:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    post:
+      tags: [Projects]
+      summary: Launch a project
+      operationId: launchProject
+      responses:
+        '200':
+          description: Project launched
+  /projects/{project_id}/pause:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    post:
+      tags: [Projects]
+      summary: Pause a project
+      operationId: pauseProject
+      responses:
+        '200':
+          description: Project paused
+  /projects/{project_id}/resume:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    post:
+      tags: [Projects]
+      summary: Resume a paused project
+      operationId: resumeProject
+      responses:
+        '200':
+          description: Project resumed
+  /projects/{project_id}/cancel:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    post:
+      tags: [Projects]
+      summary: Cancel a project
+      operationId: cancelProject
+      responses:
+        '200':
+          description: Project canceled
+  /projects/{project_id}/tasks:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    get:
+      tags: [Tasks]
+      summary: List tasks within a project
+      operationId: listTasks
+      responses:
+        '200':
+          description: Tasks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+    post:
+      tags: [Tasks]
+      summary: Create a single task within a project
+      operationId: createTask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TaskCreate'
+      responses:
+        '200':
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+  /projects/{project_id}/tasks/create_tasks:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    post:
+      tags: [Tasks]
+      summary: Create multiple tasks (bulk)
+      operationId: createTasksBulk
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/TaskCreate'
+      responses:
+        '200':
+          description: Tasks created
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+  /tasks/{task_id}:
+    parameters:
+      - in: path
+        name: task_id
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Tasks]
+      summary: Retrieve a task
+      operationId: getTask
+      responses:
+        '200':
+          description: Task details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+  /tasks/{task_id}/create-response:
+    parameters:
+      - in: path
+        name: task_id
+        required: true
+        schema:
+          type: string
+    post:
+      tags: [Tasks]
+      summary: Create a response for a task
+      operationId: createTaskResponse
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: Response recorded
+  /tasks/{task_id}/gold-standards:
+    parameters:
+      - in: path
+        name: task_id
+        required: true
+        schema:
+          type: string
+    post:
+      tags: [Tasks]
+      summary: Set gold standards for a task
+      operationId: setTaskGoldStandards
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: Gold standards stored
+  /teams:
+    get:
+      tags: [Teams]
+      summary: List teams
+      operationId: listTeams
+      responses:
+        '200':
+          description: Teams
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Team'
+components:
+  parameters:
+    ProjectId:
+      in: path
+      name: project_id
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic auth with the API key as username (set via SURGE_API_KEY).
+  schemas:
+    Project:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
+        num_tasks:
+          type: integer
+    ProjectCreate:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+        instructions:
+          type: string
+        num_workers_per_task:
+          type: integer
+        fields_template:
+          type: string
+    ProjectUpdate:
+      type: object
+      properties:
+        name:
+          type: string
+        instructions:
+          type: string
+        num_workers_per_task:
+          type: integer
+    Task:
+      type: object
+      properties:
+        id:
+          type: string
+        project_id:
+          type: string
+        fields:
+          type: object
+          additionalProperties: true
+        responses:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+    TaskCreate:
+      type: object
+      required: [fields]
+      properties:
+        fields:
+          type: object
+          additionalProperties: true
+    Team:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
