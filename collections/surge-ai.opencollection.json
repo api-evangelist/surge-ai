@@ -1,0 +1,354 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Surge AI API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.surgehq.ai/api/projects"
+          },
+          "docs": "List projects"
+        },
+        {
+          "info": {
+            "name": "Create project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.surgehq.ai/api/projects",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create project"
+        },
+        {
+          "info": {
+            "name": "List organization-wide (shared) projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.surgehq.ai/api/projects/shared"
+          },
+          "docs": "List organization-wide (shared) projects"
+        },
+        {
+          "info": {
+            "name": "List blueprint projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.surgehq.ai/api/projects/blueprints"
+          },
+          "docs": "List blueprint projects"
+        },
+        {
+          "info": {
+            "name": "Retrieve a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.surgehq.ai/api/projects/:project_id",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a project"
+        },
+        {
+          "info": {
+            "name": "Update a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.surgehq.ai/api/projects/:project_id",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a project"
+        },
+        {
+          "info": {
+            "name": "List project copies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.surgehq.ai/api/projects/:project_id/copies",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List project copies"
+        },
+        {
+          "info": {
+            "name": "Launch a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.surgehq.ai/api/projects/:project_id/launch",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Launch a project"
+        },
+        {
+          "info": {
+            "name": "Pause a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.surgehq.ai/api/projects/:project_id/pause",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Pause a project"
+        },
+        {
+          "info": {
+            "name": "Resume a paused project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.surgehq.ai/api/projects/:project_id/resume",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Resume a paused project"
+        },
+        {
+          "info": {
+            "name": "Cancel a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.surgehq.ai/api/projects/:project_id/cancel",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Cancel a project"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tasks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tasks within a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.surgehq.ai/api/projects/:project_id/tasks",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List tasks within a project"
+        },
+        {
+          "info": {
+            "name": "Create a single task within a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.surgehq.ai/api/projects/:project_id/tasks",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a single task within a project"
+        },
+        {
+          "info": {
+            "name": "Create multiple tasks (bulk)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.surgehq.ai/api/projects/:project_id/tasks/create_tasks",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create multiple tasks (bulk)"
+        },
+        {
+          "info": {
+            "name": "Retrieve a task",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.surgehq.ai/api/tasks/:task_id",
+            "params": [
+              {
+                "name": "task_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a task"
+        },
+        {
+          "info": {
+            "name": "Create a response for a task",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.surgehq.ai/api/tasks/:task_id/create-response",
+            "params": [
+              {
+                "name": "task_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a response for a task"
+        },
+        {
+          "info": {
+            "name": "Set gold standards for a task",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.surgehq.ai/api/tasks/:task_id/gold-standards",
+            "params": [
+              {
+                "name": "task_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Set gold standards for a task"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Teams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.surgehq.ai/api/teams"
+          },
+          "docs": "List teams"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
