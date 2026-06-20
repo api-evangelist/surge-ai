@@ -8,7 +8,7 @@ description: Surge AI is a human-data company that provides large-scale, expert-
   Surge API, with API-key authentication, and exposes the dashboard and API reference at app.surgehq.ai. Public datasets
   published by Surge include the toxicity dataset (the world's largest social-media toxicity dataset).
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Human Data
 - RLHF
