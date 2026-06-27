@@ -44,7 +44,7 @@ apis:
     url: https://app.surgehq.ai/docs/api
   - type: Authentication
     url: https://app.surgehq.ai/docs/api
-  - type: SDK
+  - type: SDKs
     url: https://github.com/surge-ai/surge-python
 - aid: surge-ai:surge-python-sdk
   name: Surge Python SDK
@@ -58,7 +58,7 @@ apis:
   properties:
   - type: GitHubRepository
     url: https://github.com/surge-ai/surge-python
-  - type: SDK
+  - type: SDKs
     url: https://pypi.org/project/surge-api/
 - aid: surge-ai:surge-rl-environments
   name: Surge RL Environments and Agents
@@ -167,14 +167,14 @@ common:
   url: https://app.surgehq.ai/docs/api
 - type: Authentication
   url: https://app.surgehq.ai/docs/api
-- type: SignUp
+- type: Signup
   url: https://app.surgehq.ai/customers/sign_in
 - type: Console
   url: https://app.surgehq.ai
-- type: SDK
+- type: SDKs
   url: https://github.com/surge-ai/surge-python
   name: Surge Python SDK
-- type: SDK
+- type: SDKs
   url: https://pypi.org/project/surge-api/
   name: surge-api on PyPI
 - type: GitHubOrganization
