@@ -1,0 +1,13 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/surge-ai-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: basicAuth
+  type: http
+  scheme: basic
+  description: HTTP Basic auth with the API key as username (set via SURGE_API_KEY).
+  sources:
+  - openapi/surge-ai-openapi.yml
