@@ -159,6 +159,8 @@ apis:
   - type: GitHubRepository
     url: https://github.com/surge-ai/toxicity
 common:
+- type: AgenticAccess
+  url: agentic-access/surge-ai-agentic-access.yml
 - type: DomainSecurity
   url: security/surge-ai-domain-security.yml
 - type: Authentication
