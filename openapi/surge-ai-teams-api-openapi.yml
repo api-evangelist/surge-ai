@@ -1,0 +1,45 @@
+openapi: 3.1.0
+info:
+  title: Surge AI Projects Teams API
+  description: Surge AI is a human-data platform for labeling, RLHF/SFT data collection, rubrics, and evaluation. This OpenAPI documents the REST endpoints used by the official surge-python SDK (https://github.com/surge-ai/surge-python), covering projects, tasks, and teams. Authentication uses API key Basic auth via the SURGE_API_KEY.
+  version: 1.0.0
+  contact:
+    name: Surge AI documentation
+    url: https://app.surgehq.ai/docs/api
+servers:
+- url: https://app.surgehq.ai/api
+  description: Production
+security:
+- basicAuth: []
+tags:
+- name: Teams
+paths:
+  /teams:
+    get:
+      tags:
+      - Teams
+      summary: List teams
+      operationId: listTeams
+      responses:
+        '200':
+          description: Teams
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Team'
+components:
+  schemas:
+    Team:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic auth with the API key as username (set via SURGE_API_KEY).

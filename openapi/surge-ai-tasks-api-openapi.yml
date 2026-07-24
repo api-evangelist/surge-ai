@@ -1,0 +1,176 @@
+openapi: 3.1.0
+info:
+  title: Surge AI Projects Tasks API
+  description: Surge AI is a human-data platform for labeling, RLHF/SFT data collection, rubrics, and evaluation. This OpenAPI documents the REST endpoints used by the official surge-python SDK (https://github.com/surge-ai/surge-python), covering projects, tasks, and teams. Authentication uses API key Basic auth via the SURGE_API_KEY.
+  version: 1.0.0
+  contact:
+    name: Surge AI documentation
+    url: https://app.surgehq.ai/docs/api
+servers:
+- url: https://app.surgehq.ai/api
+  description: Production
+security:
+- basicAuth: []
+tags:
+- name: Tasks
+paths:
+  /projects/{project_id}/tasks:
+    parameters:
+    - $ref: '#/components/parameters/ProjectId'
+    get:
+      tags:
+      - Tasks
+      summary: List tasks within a project
+      operationId: listTasks
+      responses:
+        '200':
+          description: Tasks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+    post:
+      tags:
+      - Tasks
+      summary: Create a single task within a project
+      operationId: createTask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TaskCreate'
+      responses:
+        '200':
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+  /projects/{project_id}/tasks/create_tasks:
+    parameters:
+    - $ref: '#/components/parameters/ProjectId'
+    post:
+      tags:
+      - Tasks
+      summary: Create multiple tasks (bulk)
+      operationId: createTasksBulk
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/TaskCreate'
+      responses:
+        '200':
+          description: Tasks created
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+  /tasks/{task_id}:
+    parameters:
+    - in: path
+      name: task_id
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Tasks
+      summary: Retrieve a task
+      operationId: getTask
+      responses:
+        '200':
+          description: Task details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+  /tasks/{task_id}/create-response:
+    parameters:
+    - in: path
+      name: task_id
+      required: true
+      schema:
+        type: string
+    post:
+      tags:
+      - Tasks
+      summary: Create a response for a task
+      operationId: createTaskResponse
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: Response recorded
+  /tasks/{task_id}/gold-standards:
+    parameters:
+    - in: path
+      name: task_id
+      required: true
+      schema:
+        type: string
+    post:
+      tags:
+      - Tasks
+      summary: Set gold standards for a task
+      operationId: setTaskGoldStandards
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '200':
+          description: Gold standards stored
+components:
+  schemas:
+    TaskCreate:
+      type: object
+      required:
+      - fields
+      properties:
+        fields:
+          type: object
+          additionalProperties: true
+    Task:
+      type: object
+      properties:
+        id:
+          type: string
+        project_id:
+          type: string
+        fields:
+          type: object
+          additionalProperties: true
+        responses:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+  parameters:
+    ProjectId:
+      in: path
+      name: project_id
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic auth with the API key as username (set via SURGE_API_KEY).
