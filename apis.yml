@@ -8,7 +8,20 @@ description: Surge AI is a human-data company that provides large-scale, expert-
   Surge API, with API-key authentication, and exposes the dashboard and API reference at app.surgehq.ai. Public datasets
   published by Surge include the toxicity dataset (the world's largest social-media toxicity dataset).
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/surge-ai.png
 tags:
 - Human Data
 - RLHF
@@ -26,11 +39,12 @@ specificationVersion: '0.19'
 apis:
 - aid: surge-ai:surge-api
   name: Surge API
-  description: Surge's REST API for managing labeling projects, tasks, and results. Endpoints cover projects (list, retrieve,
-    create, download results, save reports in multiple formats), tasks (create, list, retrieve individual tasks), and blueprints
-    (list and use as templates for new projects). Authentication uses an API key sourced from the user's Surge profile, passed
-    via the SURGE_API_KEY environment variable or set explicitly on the client. The reference is published in the Surge dashboard
-    at app.surgehq.ai/docs/api.
+  description: >-
+    Surge's REST API for managing labeling projects, tasks, and results. Endpoints cover projects (list,
+    retrieve, create, download results, save reports in multiple formats), tasks (create, list, retrieve
+    individual tasks), and blueprints (list and use as templates for new projects). Authentication uses
+    an API key sourced from the user's Surge profile, passed via the SURGE_API_KEY environment variable
+    or set explicitly on the client. The reference is published in the Surge dashboard at app.surgehq.ai/docs/api.
   humanURL: https://app.surgehq.ai/docs/api
   tags:
   - REST API
@@ -48,8 +62,9 @@ apis:
     url: https://github.com/surge-ai/surge-python
 - aid: surge-ai:surge-python-sdk
   name: Surge Python SDK
-  description: Official Python SDK (surge-api on PyPI) wrapping the Surge API. Requires Python 3.10+, MIT-licensed, and last
-    updated May 2026. Configured via surge.api_key or the SURGE_API_KEY environment variable.
+  description: >-
+    Official Python SDK (surge-api on PyPI) wrapping the Surge API. Requires Python 3.10+, MIT-licensed,
+    and last updated May 2026. Configured via surge.api_key or the SURGE_API_KEY environment variable.
   humanURL: https://github.com/surge-ai/surge-python
   tags:
   - SDK
@@ -62,8 +77,9 @@ apis:
     url: https://pypi.org/project/surge-api/
 - aid: surge-ai:surge-rl-environments
   name: Surge RL Environments and Agents
-  description: Surge's product surface for delivering complex reinforcement-learning environments and agents that challenge
-    and evaluate agentic models.
+  description: >-
+    Surge's product surface for delivering complex reinforcement-learning environments and agents that
+    challenge and evaluate agentic models.
   humanURL: https://www.surgehq.ai/products
   tags:
   - RL Environments
@@ -127,7 +143,8 @@ apis:
     url: https://www.surgehq.ai/products
 - aid: surge-ai:surge-internationalization
   name: Surge Internationalization
-  description: Multilingual data across 70+ languages for localization, translation, and multilingual model evaluation.
+  description: >-
+    Multilingual data across 70+ languages for localization, translation, and multilingual model evaluation.
   humanURL: https://www.surgehq.ai/products
   tags:
   - Internationalization
@@ -158,6 +175,33 @@ apis:
   properties:
   - type: GitHubRepository
     url: https://github.com/surge-ai/toxicity
+- aid: surge-ai:surge-ai-projects-api
+  name: Surge AI Projects API
+  description: The Projects API from Surge AI — 9 operation(s) for projects.
+  humanURL: https://app.surgehq.ai/docs/api
+  tags:
+  - Projects
+  properties:
+  - type: OpenAPI
+    url: openapi/surge-ai-projects-api-openapi.yml
+- aid: surge-ai:surge-ai-tasks-api
+  name: Surge AI Tasks API
+  description: The Tasks API from Surge AI — 5 operation(s) for tasks.
+  humanURL: https://app.surgehq.ai/docs/api
+  tags:
+  - Tasks
+  properties:
+  - type: OpenAPI
+    url: openapi/surge-ai-tasks-api-openapi.yml
+- aid: surge-ai:surge-ai-teams-api
+  name: Surge AI Teams API
+  description: The Teams API from Surge AI — 1 operation(s) for teams.
+  humanURL: https://app.surgehq.ai/docs/api
+  tags:
+  - Teams
+  properties:
+  - type: OpenAPI
+    url: openapi/surge-ai-teams-api-openapi.yml
 common:
 - type: AgenticAccess
   url: agentic-access/surge-ai-agentic-access.yml
