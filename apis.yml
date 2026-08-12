@@ -203,6 +203,9 @@ apis:
   - type: OpenAPI
     url: openapi/surge-ai-teams-api-openapi.yml
 common:
+- type: License
+  name: MIT
+  url: https://github.com/surge-ai/surge-python/blob/main/LICENSE
 - type: AgenticAccess
   url: agentic-access/surge-ai-agentic-access.yml
 - type: DomainSecurity
