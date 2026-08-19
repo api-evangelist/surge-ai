@@ -1,0 +1,149 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Surge AI Projects Tasks API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tasks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tasks within a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.surgehq.ai/api/projects/:project_id/tasks",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List tasks within a project"
+        },
+        {
+          "info": {
+            "name": "Create a single task within a project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.surgehq.ai/api/projects/:project_id/tasks",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a single task within a project"
+        },
+        {
+          "info": {
+            "name": "Create multiple tasks (bulk)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.surgehq.ai/api/projects/:project_id/tasks/create_tasks",
+            "params": [
+              {
+                "name": "project_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create multiple tasks (bulk)"
+        },
+        {
+          "info": {
+            "name": "Retrieve a task",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.surgehq.ai/api/tasks/:task_id",
+            "params": [
+              {
+                "name": "task_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a task"
+        },
+        {
+          "info": {
+            "name": "Create a response for a task",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.surgehq.ai/api/tasks/:task_id/create-response",
+            "params": [
+              {
+                "name": "task_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a response for a task"
+        },
+        {
+          "info": {
+            "name": "Set gold standards for a task",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.surgehq.ai/api/tasks/:task_id/gold-standards",
+            "params": [
+              {
+                "name": "task_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Set gold standards for a task"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

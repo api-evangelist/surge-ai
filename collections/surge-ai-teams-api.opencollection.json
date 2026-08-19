@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Surge AI Projects Teams API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Teams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.surgehq.ai/api/teams"
+          },
+          "docs": "List teams"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

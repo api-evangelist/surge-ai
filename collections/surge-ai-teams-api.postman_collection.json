@@ -1,0 +1,120 @@
+{
+  "item": [
+    {
+      "id": "da5ac5a1-c2a9-420d-a603-61170c149b2d",
+      "name": "Teams",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fb1e4715-221a-4b78-842d-7e692a0161e4",
+          "name": "List teams",
+          "request": {
+            "name": "List teams",
+            "description": {},
+            "url": {
+              "path": [
+                "teams"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f8fcb5b6-f933-4f4a-b4b0-2359174a9785",
+              "name": "Teams",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "teams"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"name\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"name\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.surgehq.ai/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a3421ed8-5bae-4620-abf4-7cd45e81c4a5",
+    "name": "Surge AI Projects Teams API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Surge AI is a human-data platform for labeling, RLHF/SFT data collection, rubrics, and evaluation. This OpenAPI documents the REST endpoints used by the official surge-python SDK (https://github.com/surge-ai/surge-python), covering projects, tasks, and teams. Authentication uses API key Basic auth via the SURGE_API_KEY.\n\nContact Support:\n Name: Surge AI documentation",
+      "type": "text/plain"
+    }
+  }
+}

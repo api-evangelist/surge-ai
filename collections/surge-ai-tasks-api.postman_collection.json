@@ -1,0 +1,683 @@
+{
+  "item": [
+    {
+      "id": "ad3e1383-ba72-41b0-831e-3354c1cffa69",
+      "name": "Tasks",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bfb199be-ac71-4be3-9bb4-0c569dd395fc",
+          "name": "List tasks within a project",
+          "request": {
+            "name": "List tasks within a project",
+            "description": {},
+            "url": {
+              "path": [
+                "projects",
+                ":project_id",
+                "tasks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "project_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ff36767b-395e-4f41-8dd5-31d05563e05f",
+              "name": "Tasks",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":project_id",
+                    "tasks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "project_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"project_id\": \"string\",\n    \"fields\": {\n      \"key_0\": \"string\",\n      \"key_1\": true\n    },\n    \"responses\": [\n      {\n        \"key_0\": true\n      },\n      {\n        \"key_0\": 7437\n      }\n    ]\n  },\n  {\n    \"id\": \"string\",\n    \"project_id\": \"string\",\n    \"fields\": {\n      \"key_0\": 2904\n    },\n    \"responses\": [\n      {\n        \"key_0\": 5915,\n        \"key_1\": 8580.613970887664\n      },\n      {\n        \"key_0\": 4478.029978444709,\n        \"key_1\": \"string\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e4ca0e86-bbdc-4c12-bdd8-13c9c7632c33",
+          "name": "Create a single task within a project",
+          "request": {
+            "name": "Create a single task within a project",
+            "description": {},
+            "url": {
+              "path": [
+                "projects",
+                ":project_id",
+                "tasks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "project_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fields\": {\n    \"key_0\": 8271\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e3201c3d-1397-4721-b31e-20a19a256e68",
+              "name": "Task created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":project_id",
+                    "tasks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "project_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fields\": {\n    \"key_0\": false,\n    \"key_1\": false\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"project_id\": \"string\",\n  \"fields\": {\n    \"key_0\": 2496,\n    \"key_1\": 5872.079899048823,\n    \"key_2\": 5523.525042597369\n  },\n  \"responses\": [\n    {\n      \"key_0\": 6412.347801167968,\n      \"key_1\": true,\n      \"key_2\": 4652,\n      \"key_3\": \"string\"\n    },\n    {\n      \"key_0\": 8484.4397047922\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cab6799d-f502-4417-93cd-17968d912ce3",
+          "name": "Create multiple tasks (bulk)",
+          "request": {
+            "name": "Create multiple tasks (bulk)",
+            "description": {},
+            "url": {
+              "path": [
+                "projects",
+                ":project_id",
+                "tasks",
+                "create_tasks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "project_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"fields\": {\n      \"key_0\": 3802.449958603339\n    }\n  },\n  {\n    \"fields\": {\n      \"key_0\": 3678.4961365092563,\n      \"key_1\": false,\n      \"key_2\": 4904.3806821597345\n    }\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "827169c7-f13c-4110-b4f3-e1be633e9a60",
+              "name": "Tasks created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":project_id",
+                    "tasks",
+                    "create_tasks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "project_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"fields\": {\n      \"key_0\": 3268\n    }\n  },\n  {\n    \"fields\": {\n      \"key_0\": true\n    }\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"project_id\": \"string\",\n    \"fields\": {\n      \"key_0\": \"string\",\n      \"key_1\": true\n    },\n    \"responses\": [\n      {\n        \"key_0\": true\n      },\n      {\n        \"key_0\": 7437\n      }\n    ]\n  },\n  {\n    \"id\": \"string\",\n    \"project_id\": \"string\",\n    \"fields\": {\n      \"key_0\": 2904\n    },\n    \"responses\": [\n      {\n        \"key_0\": 5915,\n        \"key_1\": 8580.613970887664\n      },\n      {\n        \"key_0\": 4478.029978444709,\n        \"key_1\": \"string\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5548149f-6eb3-4bb1-8920-3da8df64d5a2",
+          "name": "Retrieve a task",
+          "request": {
+            "name": "Retrieve a task",
+            "description": {},
+            "url": {
+              "path": [
+                "tasks",
+                ":task_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1dc06f88-e4e8-48c8-849e-5a3a13d8aabe",
+              "name": "Task details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tasks",
+                    ":task_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"project_id\": \"string\",\n  \"fields\": {\n    \"key_0\": 2496,\n    \"key_1\": 5872.079899048823,\n    \"key_2\": 5523.525042597369\n  },\n  \"responses\": [\n    {\n      \"key_0\": 6412.347801167968,\n      \"key_1\": true,\n      \"key_2\": 4652,\n      \"key_3\": \"string\"\n    },\n    {\n      \"key_0\": 8484.4397047922\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "84b305d8-82a0-4615-b82c-082d7e4ed9fe",
+          "name": "Create a response for a task",
+          "request": {
+            "name": "Create a response for a task",
+            "description": {},
+            "url": {
+              "path": [
+                "tasks",
+                ":task_id",
+                "create-response"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "35e0e1ec-4924-413b-950c-b3577d4ade69",
+              "name": "Response recorded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tasks",
+                    ":task_id",
+                    "create-response"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4eff1b85-d59b-4aa7-b54d-3f8985db4132",
+          "name": "Set gold standards for a task",
+          "request": {
+            "name": "Set gold standards for a task",
+            "description": {},
+            "url": {
+              "path": [
+                "tasks",
+                ":task_id",
+                "gold-standards"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "task_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "bfb1227f-c181-4f73-8aad-b9a89387880d",
+              "name": "Gold standards stored",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tasks",
+                    ":task_id",
+                    "gold-standards"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "task_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.surgehq.ai/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "89decedf-ee5e-464e-933d-cd3d7aecd2ec",
+    "name": "Surge AI Projects Tasks API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Surge AI is a human-data platform for labeling, RLHF/SFT data collection, rubrics, and evaluation. This OpenAPI documents the REST endpoints used by the official surge-python SDK (https://github.com/surge-ai/surge-python), covering projects, tasks, and teams. Authentication uses API key Basic auth via the SURGE_API_KEY.\n\nContact Support:\n Name: Surge AI documentation",
+      "type": "text/plain"
+    }
+  }
+}
