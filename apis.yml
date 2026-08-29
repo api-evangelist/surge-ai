@@ -8,6 +8,20 @@ description: Surge AI is a human-data company that provides large-scale, expert-
   Surge API, with API-key authentication, and exposes the dashboard and API reference at app.surgehq.ai. Public datasets
   published by Surge include the toxicity dataset (the world's largest social-media toxicity dataset).
 type: Index
+deliveryModel:
+  model: open-core
+  license: MIT
+  open_source: true
+  commercial: true
+  callable_host: true
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: high
+  source:
+  - license
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: self-serve
@@ -233,6 +247,8 @@ apis:
   - type: OpenAPI
     url: openapi/surge-ai-teams-api-openapi.yml
 common:
+- type: IssueTracker
+  url: https://github.com/surge-ai/surge-python/issues
 - type: License
   name: MIT
   url: https://github.com/surge-ai/surge-python/blob/main/LICENSE
