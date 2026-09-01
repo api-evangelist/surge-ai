@@ -43,7 +43,7 @@ tags:
 - Rubrics
 - Verifiers
 - RL Environments
-- Multimodal
+- Multi-Modal
 - Internationalization
 - Labeling
 tags_raw:
@@ -167,7 +167,7 @@ apis:
   description: Image, audio, and video data collection and labeling.
   humanURL: https://www.surgehq.ai/products
   tags:
-  - Multimodal
+  - Multi-Modal
   - Image
   - Audio
   - Video
