@@ -248,6 +248,8 @@ apis:
   - type: OpenAPI
     url: openapi/surge-ai-teams-api-openapi.yml
 common:
+- type: Website
+  url: https://www.surgehq.ai/
 - type: IssueTracker
   url: https://github.com/surge-ai/surge-python/issues
 - type: License
