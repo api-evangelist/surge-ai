@@ -207,6 +207,11 @@ apis:
   description: The world's largest open social-media toxicity dataset, published under MIT license.
   humanURL: https://github.com/surge-ai/toxicity
   tags:
+  - Datasets
+  - Open Data
+  - Toxicity
+  - Trust and Safety
+  tags_raw:
   - Dataset
   - Open Data
   - Toxicity
