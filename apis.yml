@@ -99,11 +99,12 @@ apis:
   tags:
   - SDK
   - Python
-  - Open-Source
+  - Open Source
   tags_raw:
   - SDK
   - Python
   - Open Source
+  - Open-Source
   properties:
   - type: GitHubRepository
     url: https://github.com/surge-ai/surge-python
