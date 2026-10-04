@@ -173,26 +173,6 @@ paths:
           description: Project canceled
 components:
   schemas:
-    ProjectUpdate:
-      type: object
-      properties:
-        name:
-          type: string
-        instructions:
-          type: string
-        num_workers_per_task:
-          type: integer
-    Project:
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        status:
-          type: string
-        num_tasks:
-          type: integer
     ProjectCreate:
       type: object
       required:
@@ -206,6 +186,26 @@ components:
           type: integer
         fields_template:
           type: string
+    Project:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
+        num_tasks:
+          type: integer
+    ProjectUpdate:
+      type: object
+      properties:
+        name:
+          type: string
+        instructions:
+          type: string
+        num_workers_per_task:
+          type: integer
   parameters:
     ProjectId:
       in: path
