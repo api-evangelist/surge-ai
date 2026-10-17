@@ -138,6 +138,13 @@ paths:
         '200':
           description: Gold standards stored
 components:
+  parameters:
+    ProjectId:
+      in: path
+      name: project_id
+      required: true
+      schema:
+        type: string
   schemas:
     TaskCreate:
       type: object
@@ -162,13 +169,6 @@ components:
           items:
             type: object
             additionalProperties: true
-  parameters:
-    ProjectId:
-      in: path
-      name: project_id
-      required: true
-      schema:
-        type: string
   securitySchemes:
     basicAuth:
       type: http
