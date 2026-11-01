@@ -1,4 +1,4 @@
-# Surge AI (surge-ai)
+# Surge AI
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,253 +66,169 @@
 
 Surge AI is a human-data company that provides large-scale, expert-quality labeled data for training and evaluating frontier AI models. The product surface spans RL environments and agents (rich, complex environments that challenge agentic models), rubrics and verifiers (scoring systems for AI outputs), RLHF (preference and reward data), SFT (foundational skill demonstrations), human evaluation, expert professional domains, internationalization across 70+ languages, multimodal (image, audio, video) data, and off-the-shelf datasets. Surge ships an official Python SDK (surge-python) wrapping the Surge API, with API-key authentication, and exposes the dashboard and API reference at app.surgehq.ai. Public datasets published by Surge include the toxicity dataset (the world's largest social-media toxicity dataset).
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/surge-ai/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/surge-ai/refs/heads/main/apis.yml)
+**Areas:** Human Data · RLHF · SFT · Rubrics · Verifiers · RL Environments · Multi-Modal · Internationalization · Labeling
 
-## Scope
+## Surge AI on APIs.io
 
-- **Type:** Index
+Everything profiled for Surge AI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/surge-ai/](https://apis.io/providers/surge-ai/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (14)
 
-- Human Data
-- RLHF
-- SFT
-- Rubrics
-- Verifiers
-- RL Environments
-- Multimodal
-- Internationalization
-- Labeling
+- [Surge API](https://apis.io/apis/surge-ai/surge-api/) — Surge's REST API for managing labeling projects, tasks, and results. Endpoints cover projects (list, retrieve, create, download results, save reports in…
+- [Surge Python SDK](https://apis.io/apis/surge-ai/surge-python-sdk/) — Official Python SDK (surge-api on PyPI) wrapping the Surge API. Requires Python 3.10+, MIT-licensed, and last updated May 2026. Configured via surge.api_key…
+- [Surge RL Environments and Agents](https://apis.io/apis/surge-ai/surge-rl-environments/) — Surge's product surface for delivering complex reinforcement-learning environments and agents that challenge and evaluate agentic models.
+- [Surge Rubrics and Verifiers](https://apis.io/apis/surge-ai/surge-rubrics-verifiers/) — Scoring rubrics and automated verifiers for grading AI outputs across domains.
+- [Surge RLHF](https://apis.io/apis/surge-ai/surge-rlhf/) — Preference and reward data for reinforcement learning from human feedback.
+- [Surge SFT](https://apis.io/apis/surge-ai/surge-sft/) — Foundational-skill demonstration data for supervised fine-tuning.
+- [Surge Human Evaluation](https://apis.io/apis/surge-ai/surge-human-evaluation/) — Quality assessment of AI outputs by Surge's expert workforce.
+- [Surge Multimodal Data](https://apis.io/apis/surge-ai/surge-multimodal/) — Image, audio, and video data collection and labeling.
+- [Surge Internationalization](https://apis.io/apis/surge-ai/surge-internationalization/) — Multilingual data across 70+ languages for localization, translation, and multilingual model evaluation.
+- [Surge Off-The-Shelf Data](https://apis.io/apis/surge-ai/surge-off-the-shelf-data/) — Pre-built datasets ready for licensing and download.
+- [Surge Toxicity Dataset](https://apis.io/apis/surge-ai/surge-toxicity-dataset/) — The world's largest open social-media toxicity dataset, published under MIT license.
+- [Surge AI Projects API](https://apis.io/apis/surge-ai/surge-ai-projects-api/) — The Projects API from Surge AI — 9 operation(s) for projects.
+- [Surge AI Tasks API](https://apis.io/apis/surge-ai/surge-ai-tasks-api/) — The Tasks API from Surge AI — 5 operation(s) for tasks.
+- [Surge AI Teams API](https://apis.io/apis/surge-ai/surge-ai-teams-api/) — The Teams API from Surge AI — 1 operation(s) for teams.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-05-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Surge API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Surge's REST API for managing labeling projects, tasks, and results. Endpoints cover projects (list, retrieve, create, download results, save reports in multiple formats), tasks (create, list, retrieve individual tasks), and blueprints (list and use as templates for new projects). Authentication uses an API key sourced from the user's Surge profile, passed via the SURGE_API_KEY environment variable or set explicitly on the client. The reference is published in the Surge dashboard at app.surgehq.ai/docs/api.
+- [Surge Ai Agentic Access](https://apis.io/agentic-access/surge-ai/surge-ai-agentic-access/)
 
-- **Human URL:** [https://app.surgehq.ai/docs/api](https://app.surgehq.ai/docs/api)
+#### JSON Schema (6)
 
-#### Tags
+The data models the API reads and writes.
 
-- REST API
-- Projects
-- Tasks
-- Blueprints
+- [Project](https://apis.io/schemas/surge-ai/surge-ai-project/)
+- [ProjectCreate](https://apis.io/schemas/surge-ai/surge-ai-project-create/)
+- [ProjectUpdate](https://apis.io/schemas/surge-ai/surge-ai-project-update/)
+- [Task](https://apis.io/schemas/surge-ai/surge-ai-task/)
+- [TaskCreate](https://apis.io/schemas/surge-ai/surge-ai-task-create/)
+- [Team](https://apis.io/schemas/surge-ai/surge-ai-team/)
 
-#### Properties
+#### JSON-LD (1)
 
+Linked-data contexts for the provider's vocabulary.
+
+- [Surge Ai Context](https://apis.io/jsonld/surge-ai/surge-ai-context/)
+
+#### Collections (4)
+
+Postman and Open Collection request collections.
+
+- [Surge AI API](https://apis.io/collections/surge-ai/open-surge-ai/)
+- [Surge AI Projects API](https://apis.io/collections/surge-ai/open-surge-ai-projects-api/)
+- [Surge AI Projects Tasks API](https://apis.io/collections/surge-ai/open-surge-ai-tasks-api/)
+- [Surge AI Projects Teams API](https://apis.io/collections/surge-ai/open-surge-ai-teams-api/)
+
+#### Overlays (3)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Surge Ai Projects Api Overlay](https://apis.io/overlays/surge-ai/surge-ai-projects-api-overlay/)
+- [Surge Ai Tasks Api Overlay](https://apis.io/overlays/surge-ai/surge-ai-tasks-api-overlay/)
+- [Surge Ai Teams Api Overlay](https://apis.io/overlays/surge-ai/surge-ai-teams-api-overlay/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Surge AI API Rules](https://apis.io/rules/surge-ai/surge-ai-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Surge Ai Authentication](https://apis.io/security/surge-ai/surge-ai-authentication/)
+- [Surge Ai Domain Security](https://apis.io/security/surge-ai/surge-ai-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Surge Ai Plans Pricing](https://apis.io/plans/surge-ai/surge-ai-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Surge Ai Rate Limits](https://apis.io/rate-limits/surge-ai/surge-ai-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Surge Ai Finops](https://apis.io/finops/surge-ai/surge-ai-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://surgehq.ai/)
 - [Documentation](https://app.surgehq.ai/docs/api)
-- [API Reference](https://app.surgehq.ai/docs/api)
-- [Authentication](https://app.surgehq.ai/docs/api)
-- [SDK](https://github.com/surge-ai/surge-python)
-- [Postman Collection](collections/surge-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/surge-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Surge Python SDK
-
-Official Python SDK (surge-api on PyPI) wrapping the Surge API. Requires Python 3.10+, MIT-licensed, and last updated May 2026. Configured via surge.api_key or the SURGE_API_KEY environment variable.
-
-- **Human URL:** [https://github.com/surge-ai/surge-python](https://github.com/surge-ai/surge-python)
-
-#### Tags
-
-- SDK
-- Python
-- Open Source
-
-#### Properties
-
-- [GitHub Repository](https://github.com/surge-ai/surge-python)
-- [SDK](https://pypi.org/project/surge-api/)
-- [Postman Collection](collections/surge-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/surge-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Surge RL Environments and Agents
-
-Surge's product surface for delivering complex reinforcement-learning environments and agents that challenge and evaluate agentic models.
-
-- **Human URL:** [https://www.surgehq.ai/products](https://www.surgehq.ai/products)
-
-#### Tags
-
-- RL Environments
-- Agents
-- Evals
-
-#### Properties
-
-- [Documentation](https://www.surgehq.ai/products)
-- [Postman Collection](collections/surge-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/surge-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Surge Rubrics and Verifiers
-
-Scoring rubrics and automated verifiers for grading AI outputs across domains.
-
-- **Human URL:** [https://www.surgehq.ai/products](https://www.surgehq.ai/products)
-
-#### Tags
-
-- Rubrics
-- Verifiers
-- Evals
-
-#### Properties
-
-- [Documentation](https://www.surgehq.ai/products)
-- [Postman Collection](collections/surge-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/surge-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Surge RLHF
-
-Preference and reward data for reinforcement learning from human feedback.
-
-- **Human URL:** [https://www.surgehq.ai/products](https://www.surgehq.ai/products)
-
-#### Tags
-
-- RLHF
-- Preference Data
-
-#### Properties
-
-- [Documentation](https://www.surgehq.ai/products)
-- [Postman Collection](collections/surge-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/surge-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Surge SFT
-
-Foundational-skill demonstration data for supervised fine-tuning.
-
-- **Human URL:** [https://www.surgehq.ai/products](https://www.surgehq.ai/products)
-
-#### Tags
-
-- SFT
-- Fine-Tuning
-
-#### Properties
-
-- [Documentation](https://www.surgehq.ai/products)
-- [Postman Collection](collections/surge-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/surge-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Surge Human Evaluation
-
-Quality assessment of AI outputs by Surge's expert workforce.
-
-- **Human URL:** [https://www.surgehq.ai/products](https://www.surgehq.ai/products)
-
-#### Tags
-
-- Human Evaluation
-- Quality
-
-#### Properties
-
-- [Documentation](https://www.surgehq.ai/products)
-- [Postman Collection](collections/surge-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/surge-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Surge Multimodal Data
-
-Image, audio, and video data collection and labeling.
-
-- **Human URL:** [https://www.surgehq.ai/products](https://www.surgehq.ai/products)
-
-#### Tags
-
-- Multimodal
-- Image
-- Audio
-- Video
-
-#### Properties
-
-- [Documentation](https://www.surgehq.ai/products)
-- [Postman Collection](collections/surge-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/surge-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Surge Internationalization
-
-Multilingual data across 70+ languages for localization, translation, and multilingual model evaluation.
-
-- **Human URL:** [https://www.surgehq.ai/products](https://www.surgehq.ai/products)
-
-#### Tags
-
-- Internationalization
-- Multilingual
-- Translation
-
-#### Properties
-
-- [Documentation](https://www.surgehq.ai/products)
-- [Postman Collection](collections/surge-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/surge-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Surge Off-The-Shelf Data
-
-Pre-built datasets ready for licensing and download.
-
-- **Human URL:** [https://www.surgehq.ai/products](https://www.surgehq.ai/products)
-
-#### Tags
-
-- Datasets
-- Pre-Built Data
-
-#### Properties
-
-- [Documentation](https://www.surgehq.ai/products)
-- [Postman Collection](collections/surge-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/surge-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Surge Toxicity Dataset
-
-The world's largest open social-media toxicity dataset, published under MIT license.
-
-- **Human URL:** [https://github.com/surge-ai/toxicity](https://github.com/surge-ai/toxicity)
-
-#### Tags
-
-- Dataset
-- Open Data
-- Toxicity
-- Trust and Safety
-
-#### Properties
-
-- [GitHub Repository](https://github.com/surge-ai/toxicity)
-- [Postman Collection](collections/surge-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/surge-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [Portal](https://www.surgehq.ai)
-- [Documentation](https://app.surgehq.ai/docs/api)
-- [API Reference](https://app.surgehq.ai/docs/api)
-- [Authentication](https://app.surgehq.ai/docs/api)
-- [Sign Up](https://app.surgehq.ai/customers/sign_in)
-- [Console](https://app.surgehq.ai)
-- [SDK](https://github.com/surge-ai/surge-python)
-- [SDK](https://pypi.org/project/surge-api/)
-- [GitHub Organization](https://github.com/surge-ai)
-- [GitHub Repository](https://github.com/surge-ai/toxicity)
+- [API reference](https://app.surgehq.ai/docs/api)
+- [Support](https://surgehq.ai/contact)
 - [Blog](https://www.surgehq.ai/blog)
-- [Support](https://www.surgehq.ai)
-- [X (Twitter)](https://x.com/HelloSurgeAI)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
+- [Terms of service](https://surgehq.ai/terms-of-service)
+- [Privacy policy](https://surgehq.ai/privacy-policy)
+- [GitHub](https://github.com/surge-ai)
+- [Status](https://status.surgehq.ai/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** http://apievangelist.com
+**Kin Score 28.7** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 59.5 |
+| Access clarity | 18.4 |
+
+**Agent readiness 20.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 11.8** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/surge-ai/](https://apis.io/providers/surge-ai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Surge AI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/surge-ai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
